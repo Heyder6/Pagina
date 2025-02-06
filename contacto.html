@@ -10,6 +10,7 @@
   <nav>
     <div class="logo">
       <h1>Camisas Creativas</h1>
+      <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
     </div>
     <ul>
       <li><a href="index.html">Inicio</a></li>
@@ -18,21 +19,27 @@
     </ul>
   </nav>
 
-  <section class="contact">
-    <h2>Contacto</h2>
-    <form>
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Correo Electrónico:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="message">Mensaje:</label>
-      <textarea id="message" name="message" required></textarea>
-      <button type="submit" class="cta-button">Enviar</button>
-    </form>
-    <div class="social-links">
-      <a href="#">WhatsApp</a>
-      <a href="#">Instagram</a>
-      <a href="#">Correo Electrónico</a>
+  <section class="creative-contact">
+    <div class="contact-decoration">
+      <div class="floating-shirt">👕</div>
+      <div class="floating-heart">💖</div>
+      <div class="floating-star">⭐</div>
+    </div>
+    <div class="contact-form">
+      <h2>¡Hablemos de tu diseño ideal!</h2>
+      <form>
+        <div class="form-group">
+          <input type="text" placeholder="Tu nombre" required>
+          <input type="email" placeholder="Correo electrónico" required>
+        </div>
+        <textarea placeholder="Cuéntanos tu idea..." rows="5" required></textarea>
+        <button type="submit">Enviar Mensaje 🚀</button>
+      </form>
+      <div class="social-links">
+        <a href="#" class="whatsapp">WhatsApp 💬</a>
+        <a href="#" class="instagram">Instagram 📸</a>
+        <a href="#" class="email">Email 📧</a>
+      </div>
     </div>
   </section>
 
