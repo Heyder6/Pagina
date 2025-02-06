@@ -10,6 +10,7 @@
   <nav>
     <div class="logo">
       <h1>Camisas Creativas</h1>
+      <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
     </div>
     <ul>
       <li><a href="index.html">Inicio</a></li>
@@ -19,25 +20,31 @@
   </nav>
 
   <section class="products">
-    <h2>Nuestros Productos</h2>
+    <h2>Nuestra Colección</h2>
     <div class="product-grid">
-      <div class="product-card" data-product-id="1">
-        <img src="https://frutocuatro.com/wp-content/uploads/2018/05/camiseta-64000-royal-frente.jpg" alt="Camisa 1">
-        <h3>Camisa Elegante</h3>
-        <p>$25.00</p>
-      </div>
-      <div class="product-card" data-product-id="2">
-        <img src="https://frutocuatro.com/wp-content/uploads/2018/05/camiseta-64000-royal-frente.jpg" alt="Camisa 2">
-        <h3>Camisa Casual</h3>
-        <p>$20.00</p>
-      </div>
-      <div class="product-card" data-product-id="3">
-        <img src="https://frutocuatro.com/wp-content/uploads/2018/05/camiseta-64000-royal-frente.jpg" alt="Camisa 3">
-        <h3>Camisa Deportiva</h3>
-        <p>$22.00</p>
-      </div>
+      <!-- Los productos se generarán dinámicamente con JavaScript -->
     </div>
   </section>
+
+  <!-- Modal de producto -->
+  <div class="product-modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <img id="modal-image" src="" alt="">
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+      <p class="modal-price"></p>
+      <div class="quantity-control">
+        <button onclick="adjustQuantity(-1)">-</button>
+        <input type="number" value="1" min="1" id="product-quantity">
+        <button onclick="adjustQuantity(1)">+</button>
+      </div>
+      <div class="modal-buttons">
+        <button onclick="addToCart()">Añadir al Carrito</button>
+        <button class="buy-now" onclick="buyNow()">Comprar Ahora</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
